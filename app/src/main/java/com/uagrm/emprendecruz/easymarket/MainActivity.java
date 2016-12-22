@@ -154,11 +154,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             ((TextView) findViewById(R.id.tvDistance)).setText(route.distance.text);
 
             originMarkers.add(mapa.addMarker(new MarkerOptions()
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.start_blue))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.env))
                     .title(route.startAddress)
                     .position(route.startLocation)));
             destinationMarkers.add(mapa.addMarker(new MarkerOptions()
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.end_green))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.cli))
                     .title(route.endAddress)
                     .position(route.endLocation)));
 
