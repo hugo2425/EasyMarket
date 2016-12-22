@@ -11,7 +11,7 @@
         android:layout_marginTop="10dp"
         android:text="INFORMACION DEL CLIENTE"
         android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
+        android:background="#903622"
         android:textAlignment="center"/>
 
     <LinearLayout
@@ -34,7 +34,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_gravity="left"
                 android:text="Nombre"
-                android:textColor="#000"/>
+                />
 
             <TextView
                 android:id="@+id/tv_phone_client_detalle"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:text="Telefono"
-                android:textColor="#000"/>
+                />
 
             <TextView
                 android:id="@+id/tv_address_client_detalle"
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:text="Direccion"
-                android:textColor="#000"/>
+                />
 
         </LinearLayout>
 
@@ -73,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="¿Cómo Llegar?"
-                android:textColor="@android:color/holo_red_dark"/>
+                android:textStyle="bold"
+                android:textColor="#903622"/>
 
         </LinearLayout>
 
@@ -85,7 +86,7 @@
         android:layout_marginTop="10dp"
         android:text="DETALLE DEL PEDIDO"
         android:textColor="@android:color/white"
-        android:background="#903622"
+        android:background="@color/colorPrimary"
         android:textAlignment="center"/>
 
     <LinearLayout
@@ -143,7 +144,8 @@
             android:layout_weight="1"
             android:text="Imprimir Factura"
             android:textColor="@android:color/white"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"/>
 
     </LinearLayout>
 

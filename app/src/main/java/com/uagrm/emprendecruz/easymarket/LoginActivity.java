@@ -33,9 +33,6 @@ public class LoginActivity extends AppCompatActivity {
     Button btIngresar;
     String idEnviador;
 
-    private LoginButton loginButton;
-    private CallbackManager callbackManager;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,31 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
-        callbackManager = CallbackManager.Factory.create();
-        loginButton = (LoginButton) findViewById(R.id.loginButtonFacebook);
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                goMainScreen();
-            }
-
-            @Override
-            public void onCancel() {
-                Toast.makeText(getApplicationContext(), "Cancel Login Facebook", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Toast.makeText(getApplicationContext(), "Error Login Facebook", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     public void VerificarDatos(String correo, String passw){
@@ -129,12 +101,6 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    private void goMainScreen() {
-        Intent i = new Intent(this, MainScreenActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
     }
 
     private void iniciarActividad() {

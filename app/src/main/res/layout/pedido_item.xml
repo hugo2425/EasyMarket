@@ -39,7 +39,7 @@
                 android:text="Nombre"
                 android:textStyle="bold"
                 android:textSize="18dp"
-                android:textColor="#000"/>
+                android:textColor="@color/colorPrimaryDark"/>
 
             <TextView
                 android:id="@+id/tv_phone_client"
@@ -47,7 +47,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:text="Telefono"
-                android:textStyle="italic"
                 android:textSize="15dp"
                 android:textColor="#000"/>
 
@@ -58,7 +57,6 @@
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="left"
                 android:text="Direccion"
-                android:textStyle="italic"
                 android:textSize="15dp"
                 android:textColor="#000"/>
 

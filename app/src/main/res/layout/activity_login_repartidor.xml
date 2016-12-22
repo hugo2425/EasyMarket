@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textStyle="bold"
             android:text="EASYMARKET"/>
     </LinearLayout>
 
@@ -36,7 +37,6 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/log"
             android:hint="   Ingrese su Usuario"
-            android:text="marioandres@gmail.com"
             android:textColorHint="@color/colorPrimary"/>
 
         <EditText
@@ -46,7 +46,6 @@
             android:drawableLeft="@drawable/pas"
             android:inputType="textPassword"
             android:hint=" Ingrese su Password"
-            android:text="12345678"
             android:textColorHint="@color/colorPrimary"/>
 
         <Button

@@ -135,15 +135,16 @@ public class ListPedidosActivity extends AppCompatActivity{
             LayoutInflater inflater = LayoutInflater.from(getContext());
             View item = inflater.inflate(R.layout.pedido_item, null);
             SmartImageView smartImageView = (SmartImageView) item.findViewById(R.id.iv_foto_cliente);
-            String urlImages = "http://54.201.162.73/supermercado/images/usuario/" + pedidos[position].getImgCli().toString();
+            //String urlImages = "http://54.201.162.73/supermercado/images/usuario/" + pedidos[position].getImgCli().toString();
+            String urlImages = "http://ec2-54-201-162-73.us-west-2.compute.amazonaws.com/easymarket/imagenes/clientes/" + pedidos[position].getImgCli().toString();
             Rect rectangulo = new Rect(smartImageView.getLeft(), smartImageView.getTop(), smartImageView.getRight(), smartImageView.getBottom());
             smartImageView.setImageUrl(urlImages, rectangulo);
             TextView nombreCli = (TextView)item.findViewById(R.id.tv_name_client);
             nombreCli.setText(pedidos[position].getNombre());
             TextView telefonoCli = (TextView)item.findViewById(R.id.tv_phone_client);
-            telefonoCli.setText(pedidos[position].getTelefono());
+            telefonoCli.setText("tel: " + pedidos[position].getTelefono());
             TextView direccionCli = (TextView)item.findViewById(R.id.tv_address_client);
-            direccionCli.setText(pedidos[position].getDireccion());
+            direccionCli.setText("dir: " + pedidos[position].getDireccion());
             return(item);
         }
     }
